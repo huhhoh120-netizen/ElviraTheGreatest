@@ -1,24 +1,32 @@
+/* Updated to allow scrolling and prevent overlay/pulse from blocking interactions */
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    height: auto;
     font-family: 'Arial', sans-serif;
     color: #333;
     background-color: #f9f9f9;
+    overflow: auto;
 }
 
 .background {
     position: relative;
     width: 100%;
-    height: 100%;
+    /* allow the background to grow with the content instead of forcing 100% height */
+    min-height: 100vh;
+    height: auto;
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    /* let content flow naturally vertically so the page can scroll */
+    align-items: flex-start;
+    /* add spacing so content is not glued to the top */
+    padding: 60px 0;
+    overflow: visible;
 }
 
 .overlay {
@@ -28,6 +36,9 @@ body, html {
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.7);
+    /* do not capture pointer events so the overlay doesn't block scroll/clicks */
+    pointer-events: none;
+    z-index: 5;
 }
 
 .content {
@@ -35,6 +46,8 @@ body, html {
     z-index: 10;
     padding: 20px;
     max-width: 800px;
+    position: relative;
+    transform: none;
 }
 
 h1 {
@@ -84,11 +97,13 @@ p {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .gallery-item {
     text-align: center;
     width: 30%;
+    min-width: 200px;
 }
 
 .gallery-item img {
@@ -142,4 +157,21 @@ p {
     transform: translate(-50%, -50%);
     z-index: 100;
     animation: pulse 2s infinite;
+    /* don't block pointer events so user can scroll / interact */
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
 }
