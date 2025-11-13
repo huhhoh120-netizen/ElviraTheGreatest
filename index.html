@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvira – En Hyllest på Styrke og Modighet</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Elvira – En Skjønnhet i Styrke</h1>
+            <h2>En Hyllest på Modighet og Resilens</h2>
+            <p>Elvira, du er en lys i mørket, en symbol på styrke og modighet. Du fortsetter å lyse opp verden med din uknuselige pågangsmot og din evige ånd.</p>
+            <div class="quotes">
+                <blockquote>"For jeg er overbevist om at hverken død eller liv, hverken engler eller herskere, hverken nåværende eller fremtidige ting, hverken høyder eller dypt, eller noen annen skapning, kan skille oss fra Guds kjærlighet som er i Kristus Jesus, vår Herre." (Rom 8:38-39)</blockquote>
+                <blockquote>"For Gud har ikke gitt oss en ånd av frykt, men av kraft, elskap og klarhet." (2 Timoteus 1:7)</blockquote>
+                <blockquote>"Men han sier til meg: 'Min nåde er nok for deg, for min kraft vises frem i svakheter.' Derfor vil jeg gjerne rostes i mine svakheter, for at Kristi kraft kan hvile over meg." (2 Kor 12:9)</blockquote>
+            </div>
+            <div class="compliments">
+                <p>Du er en skjønnhet i styrke, en lys i mørket.</p>
+                <p>Du er en inspirasjon for oss alle, en symbol på modighet og resiliens.</p>
+                <p>Du fortsetter å slåss med livets harde skole, og du gjør det med en styrke som inspirerer oss alle.</p>
+                <p>Du har en evne til å se humor i det som ville kunne være trist, og det er en skjønnhet i seg selv.</p>
+                <p>Du er den som alltid kan finne den positive siden, og det inspirerer oss alle.</p>
+            </div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="sunrise.jpg" alt="Ny begynnelse og håp">
+                    <p>Ny begynnelse og håp – som du alltid finner veien fram.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="angel.jpg" alt="Beskyttelse og styrke">
+                    <p>Beskyttelse og styrke – som du alltid har i dine hjerte.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="flower.jpg" alt="Liv og skjønnhet i motsetninger">
+                    <p>Liv og skjønnhet i motsetninger – som du alltid viser oss.</p>
+                </div>
+            </div>
+            <div class="further-reading">
+                <h3>Videre Lesning</h3>
+                <ul>
+                    <li><a href="https://example.com/article1" target="_blank">10 Måter å Finn Styrke i Dine Svakheter</a></li>
+                    <li><a href="https://example.com/article2" target="_blank">Hvordan å Være Modig i En Verden Full av Frykt</a></li>
+                    <li><a href="https://example.com/article3" target="_blank">Resiliens: Hvordan å Overleve og Vokse gjennom Livets Utlegg</a></li>
+                </ul>
+                <h3>Bibelske Passasjer</h3>
+                <ul>
+                    <li><a href="https://example.com/bible1" target="_blank">"For jeg vet de tanker jeg tenker om eder, sier Herren, tanker om fred og ikke om ondt, for å gi eder en fremtid med håp." (Jeremia 29:11)</a></li>
+                    <li><a href="https://example.com/bible2" target="_blank">"Men de som venter på Herren skal skaffe nye krefter, de skal stige opp som ene i himmelen, de skal løpe og ikke bli utmattet, de skal gå og ikke bli trøtt." (Isaias 40:31)</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pulse"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const pulse = document.querySelector('.pulse');
+            pulse.style.position = 'fixed';
+            pulse.style.width = '100px';
+            pulse.style.height = '100px';
+            pulse.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+            pulse.style.borderRadius = '50%';
+            pulse.style.top = '50%';
+            pulse.style.left = '50%';
+            pulse.style.transform = 'translate(-50%, -50%)';
+            pulse.style.zIndex = '100';
+            pulse.style.animation = 'pulse 2s infinite';
+        });
+    </script>
+</body>
+</html>
